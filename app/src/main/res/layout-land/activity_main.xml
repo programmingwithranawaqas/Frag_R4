@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/landscape_mode"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:layout="@layout/fragment_list"
+        class="com.example.frag_r4.ListFrag"
+        android:id="@+id/listfrag"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello this is landscape view"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            />
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_content"
+        class="com.example.frag_r4.ContentFrag"
+        android:id="@+id/contentfrag"
+        />
+
+    </LinearLayout>
+
+
+</LinearLayout>
